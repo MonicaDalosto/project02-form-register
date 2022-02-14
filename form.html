@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+  <div class="container">
+    <form id="form" action="" method="post">
+      <h1>
+        Formulário de Registro
+      </h1>
+      <fieldset form="contact" class="form-group">
+        <legend>Contato</legend>
+        <div class="input-control">
+          <label for="fullName">Nome</label>
+          <input id="fullName" type="text" name="fullName" class="inputField"/>
+          <div class="errorMessage"></div>
+        </div>
+        <div class="input-control">
+          <label for="birthday">Data de Nascimento</label>
+          <input id="birthday" type="date" name="birthday" class="inputField" min="1900-01-01"/>
+          <div class="errorMessage"></div>
+        </div>
+        <div class="input-control">
+          <label for="email">Email</label>
+          <input id="email" type="text" name="email" class="inputField"/>
+          <div class="errorMessage"></div>
+        </div>
+        <div class="input-control">
+          <label for="password">Senha</label>
+          <input id="password" type="password" name="password" class="inputField">
+          <div class="errorMessage"></div>
+        </div>
+        <div class="input-control">
+          <label for="confirmPassword">Confirmação de Senha</label>
+          <input id="confirmPassword" type="password" name="confirmPassword" class="inputField">
+          <div class="errorMessage"></div>
+          <div id="passwordMessage">
+            <h3>A senha deve conter:</h3>
+            <p id="letter" class="invalid">Ao menos uma letra minúscula;</p>
+            <p id="capitalLetter" class="invalid">Ao menos uma letra maiúscula;</p>
+            <p id="numberCharacter" class="invalid">Ao menos um número;</p>
+            <p id="specialCharacter" class="invalid">Ao menos um caractere especial [!@#$%&*];</p>
+            <p id="lengthPassword" class="invalid">Ao menos 8 caracteres;</p>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset form="address" class="form-group">
+        <legend>Endereço</legend>
+        <div class="input-control">
+          <label for="cep">CEP</label>
+          <input id="cep" type="text" name="cep" class="inputField">
+          <div class="errorMessage"></div>
+          <button id="searchCep" type="button">Buscar Cep</button>
+        </div>
+        <div class="input-control">
+          <label for="street" >Logradouro</label>
+          <input id="street" type="text" name="street" class="inputField"/>
+          <div class="errorMessage"></div>
+        </div>
+        <div class="input-control">
+          <label for="numberAddress" >Número</label>
+          <input id="numberAddress" type="text" name="numberAddress" class="inputField"/>
+          <div class="errorMessage"></div>
+        </div>
+        <div class="input-control">
+          <label for="district">Bairro</label>
+          <input id="district" type="text" name="district" class="inputField"/>
+          <div class="errorMessage"></div>
+        </div>
+        <div class="input-control">
+          <label for="city">Cidade</label>
+          <input id="city" type="text" name="city" class="inputField"/>
+          <div class="errorMessage"></div>
+        </div>
+        <div class="input-control">
+          <label for="state">Estado</label>
+          <input id="state" type="text" name="state" class="inputField"/>
+          <div class="errorMessage"></div>
+        </div>
+      </fieldset>
+      <button id="submit" type="submit">Enviar</button>
+    </form>
+  </div>
+  
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="fillform.js"></script>
+
+</body>
+</html>
